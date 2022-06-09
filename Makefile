@@ -7,7 +7,8 @@ install-basic:
 	sudo zypper install-new-recommends
 	sudo zypper in gcc vim zsh make curl wget \
 		git neofetch chromium docker rar \
-		unrar
+		unrar clang cmake ninja gtk3-devel
+
 
 git-configure:
 	git config --global init.defaultBranch main
@@ -30,7 +31,8 @@ enable-docker:
 
 install-multi:
 	sudo zypper install x264 libx264-161 libx264-devel \
-		chromium-ffmpeg-extra ffmpeg
+		chromium-ffmpeg-extra ffmpeg-4 vlc vlc-codecs \
+		h264enc libopenh264-6
 
 ohmyzsh:
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -79,8 +81,6 @@ install-vscode:
 	sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'
 	sudo zypper refresh
 	sudo zypper install code
-
-
 
 
 
