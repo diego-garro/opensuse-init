@@ -8,6 +8,8 @@ install-basic:
 	sudo zypper in gcc vim zsh make curl wget \
 		git neofetch chromium docker rar \
 		unrar clang cmake ninja gtk3-devel
+	sudo zypper rm vlc
+	sudo zypper in vlc vlc-codecs
 
 git-configure:
 	git config --global init.defaultBranch main
