@@ -9,7 +9,6 @@ install-basic:
 		git neofetch chromium docker rar \
 		unrar clang cmake ninja gtk3-devel
 
-
 git-configure:
 	git config --global init.defaultBranch main
 	git config --global user.name "diego-garro"
@@ -20,6 +19,9 @@ git-configure:
 install-go:
 	zypper search go1.1
 	echo '-> install the latest stable version'
+
+install-node:
+	sudo zypper in nodejs
 
 enable-docker:
 	sudo systemctl enable docker
@@ -82,16 +84,9 @@ install-vscode:
 	sudo zypper refresh
 	sudo zypper install code
 
-
-
-
-
-
-
-
-
-
-
-
-
+change-hostname:
+	echo 'Open /etc/hostname and change the name by yours'
+	echo '$ sudo vim /etc/hostname'
+	echo 'Open /etc/hosts and change any ocurrence of the computer name'
+	echo 'with yours'
 
