@@ -28,7 +28,7 @@ enable-docker:
 	sudo systemctl start docker
 	# Enable Docker to run on OpenSUSE without sudo
 	sudo groupadd docker
-	sudo gpasswd -a $USER docker
+	sudo gpasswd -a $(USER) docker
 	newgrp docker
 
 install-multi:
