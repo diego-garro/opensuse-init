@@ -35,8 +35,7 @@ enable-docker:
 
 install-multi:
 	sudo zypper install x264 libx264-161 libx264-devel \
-		chromium-ffmpeg-extra ffmpeg-4 vlc vlc-codecs \
-		h264enc libopenh264-6
+		chromium-ffmpeg-extra ffmpeg-4 h264enc libopenh264-6
 
 ohmyzsh:
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
