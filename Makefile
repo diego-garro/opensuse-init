@@ -79,6 +79,9 @@ install-v:
 	# Download VLS and put it in the v installation directory
 	# https://github.com/vlang/vls/releases/tag/latest
 
+install-rust:
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | zsh
+
 install-vscode:
 	sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 	sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'
