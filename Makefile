@@ -94,3 +94,15 @@ change-hostname:
 	echo 'Open /etc/hosts and change any ocurrence of the computer name'
 	echo 'with yours'
 
+POSTMAN_DESKTOP_FILE=~/.local/share/applications/postman.desktop
+
+install-postman:
+	mv ~/Descargas/Postman /home/diego/
+	echo '[Desktop Entry]' > POSTMAN_DESKTOP_FILE
+	echo 'Encoding=UTF-8' >> POSTMAN_DESKTOP_FILE
+	echo 'Name=Postman' >> POSTMAN_DESKTOP_FILE
+	echo 'Exec=/home/diego/Postman/app/Postman %U' >> POSTMAN_DESKTOP_FILE
+	echo 'Icon=/home/diego/Postman/app/resources/app/assets/icon.png' >> POSTMAN_DESKTOP_FILE
+	echo 'Terminal=false' >> POSTMAN_DESKTOP_FILE
+	echo 'Type=Application' >> POSTMAN_DESKTOP_FILE
+	echo 'Categories=Development;' >> POSTMAN_DESKTOP_FILE
