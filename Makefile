@@ -16,7 +16,7 @@ git-configure:
 	git config --global user.name "diego-garro"
 	git config --global user.email "diego.garromolina@yahoo.com"
 	git config --global alias.s "status -s -b"
-	git config --global alias.lg "log --oneline --all --graph"
+	git config --global alias.lg "log --oneline --all --graph --decorate"
 
 install-go:
 	zypper search go1.1
